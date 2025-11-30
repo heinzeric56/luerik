@@ -1,0 +1,87 @@
+/* Grundlegendes Layout und Farben */
+:root {
+  --primary-color: #007bff; /* Blau */
+  --background-color: #f4f6f9;
+  --text-color: #343a40;
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Haupt-Container für die Tabelle */
+#content-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-light);
+  border-radius: 8px;
+  overflow-x: auto; /* Erlaubt horizontales Scrollen bei Bedarf */
+}
+
+/* Tabellen-Styling */
+.song-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 800px; /* Mindestbreite der Tabelle */
+}
+
+/* Tabellenkopf */
+.song-table thead tr {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: left;
+  height: 50px;
+}
+
+.song-table th {
+  padding: 12px 15px;
+  font-weight: 600;
+}
+
+/* Tabellenkörper */
+.song-table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.song-table tbody tr:nth-of-type(even) {
+  background-color: #f8f9fa;
+}
+
+.song-table tbody tr:hover {
+  background-color: #e2f0ff; /* Helles Blau beim Hover */
+}
+
+.song-table td {
+  padding: 12px 15px;
+  vertical-align: top;
+}
+
+/* Link-Styling */
+.song-table a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.song-table a:hover {
+  text-decoration: underline;
+}
+
+/* Stil für fehlende Daten */
+.data-placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
